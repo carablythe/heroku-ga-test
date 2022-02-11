@@ -52,6 +52,98 @@ app.get('/' , (req, res) => {
   res.send('Hello World!');
 });
 
+//_____________________
+//Specific functions for this app below
+//_____________________
+
+app.get('/pokemon/new', (req,res) => {
+  res.render('new.ejs')
+})
+
+app.get('/pokemon', (req,res) => {
+  Pokemon.find({}, (error, allPokemon) => {
+    res.render(
+      'index.ejs',
+      {
+        pokemonX: allPokemon
+      }
+    )
+  })
+})
+
+app.post('/pokemon', (req, res) => {
+  Pokemon.create(req.body, (error, createdPokemon) => {
+    res.redirect('/pokemon')
+  })
+})
+
+// app.delete('/pokemon/:id', (req, res) => {
+//   Pokemon.findByIdAndRemove(req.params.id, (error, data) => {
+//     res.redirect('/pokemon')
+//   })
+// })
+
+app.delete('/pokemon/:id', (req, res) => {
+  Pokemon.findOneAndRemove({id:req.params.id}, (error, data) => {
+    res.redirect('/pokemon')
+  })
+})
+
+// // seed
+// app.get('/pokemon/seed', (req,res) => {
+//   Pokemon.create(pokeSeed, (err, resetPokemon) => {
+//     res.redirect('/pokemon')
+//   })
+// })
+//
+// Pokemon.create(pokeSeed, (err ,data) => {
+//   if (err) {
+//     console.log('err');
+//   }
+//   else {
+//     console.log('pokemon added to the dex');
+//   }
+// })
+// Pokemon.collection.drop()
+// Pokemon.count({}, (err, data) => {
+//   console.log(`there are ${data} pokemon in your pokedex`);
+// })
+
+
+app.put('/pokemon/:id', (req,res) => {
+  Pokemon.findByIdAndUpdate(req.params.id, req.body, {new:true},(error, updatedModel) => {
+    if(error){
+        console.log('err');
+      } else{
+        res.redirect('/pokemon')
+      }
+    })
+  })
+
+
+app.get('/pokemon/:id', (req, res) => {
+    Pokemon.find({id:req.params.id}, (error, foundPokemon) => {
+      res.render(
+        'show.ejs',
+        {
+          pokemonX: foundPokemon[0]
+        }
+      )
+    })
+  })
+
+app.get('/pokemon/:id/edit', (req, res) => {
+  Pokemon.find({id:req.params.id}, (error, foundPokemon) => {
+    console.log(foundPokemon)
+    res.render(
+      'edit.ejs',
+      {
+        pokemonX: foundPokemon[0]
+      }
+    )
+  })
+})
+
 //___________________
 //Listener
 //___________________

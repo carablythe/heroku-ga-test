@@ -1,0 +1,8 @@
+html {font-family: 'Pokemon Solid', sans-serif}
+
+h1 {margin: 0vw 10vw}
+
+.showPage {background-image: url("<%=pokemonX.img%>");
+              background-size: cover;
+              background-repeat: no-repeat;
+              font-size: 3vw}
