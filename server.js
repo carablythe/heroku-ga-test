@@ -56,16 +56,16 @@ app.get('/' , (req, res) => {
 //Specific functions for this app below
 //_____________________
 
-app.get('/pokemon/new', (req,res) => {
+app.get('/activities/new', (req,res) => {
   res.render('new.ejs')
 })
 
-app.get('/pokemon', (req,res) => {
-  Pokemon.find({}, (error, allPokemon) => {
+app.get('/activities', (req,res) => {
+  Extra.find({}, (error, allActivities) => {
     res.render(
       'index.ejs',
       {
-        pokemonX: allPokemon
+        activitiesX: allActivties
       }
     )
   })
@@ -126,7 +126,7 @@ app.get('/pokemon/:id', (req, res) => {
       res.render(
         'show.ejs',
         {
-          pokemonX: foundPokemon[0]
+          activitiesX: foundPokemon[0]
         }
       )
     })
@@ -138,7 +138,7 @@ app.get('/pokemon/:id/edit', (req, res) => {
     res.render(
       'edit.ejs',
       {
-        pokemonX: foundPokemon[0]
+        activitiesX: foundPokemon[0]
       }
     )
   })
