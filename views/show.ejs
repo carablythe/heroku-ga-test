@@ -1,21 +1,17 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
-    <meta charset="utf-8">
-    <title>Pokemon Character Page</title>
-    <link rel="stylesheet" href="/style.css">
-    <link href="http://fonts.cdnfonts.com/css/pokemon-solid" rel="stylesheet" font-family: 'Pokemon Solid', sans-serif>
+    <%-include('./partials/head.ejs')%>
   </head>
   <body class= "showPage">
-    <h1><%=pokemonX.name%></h1>
+    <h1>Activity Completed:</h1>
       </br>
-      ID:<%=pokemonX.id%></br>
-      Type:<%=pokemonX.type%></br>
-      Stats:<%=pokemonX.stats%></br>
-      </br>
+      Description of Activity:<%=activitiesX.description%></br>
+      Time Spent on the Activity (total minutes):<%=activitiesX.timeSpent%></br>
   </body>
   <nav>
-    <a href="/pokemon">Return to Pokedex Main Page</a><br/>
-    <a href="/pokemon/<%=pokemonX.id%>/edit">Edit this Pokemon's Information</a>
+    <a href="/activities/new">Add a New Activity that you Completed!</a><br/>
+    <a href="/activities">See List of All Completed Activities</a><br/>
+    <a href="/">*Reward, Please!* Top Page</a>
   </nav>
 </html>

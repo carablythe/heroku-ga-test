@@ -1,19 +1,19 @@
   <!DOCTYPE html>
   <html lang="en" dir="ltr">
     <head>
-      <meta charset="utf-8">
-      <title>New Pokemon</title>
-      <link rel="stylesheet" href="/style.css">
-      <link href="http://fonts.cdnfonts.com/css/pokemon-solid" rel="stylesheet" font-family: 'Pokemon Solid', sans-serif>
+      <%-include('./partials/head.ejs')%>
     </head>
     <body>
-      <h1>Create New Pokemon</h1>
-      <form action ="/pokemon" method="POST">
-       ID: <input type = "text"  name = "id" / ><br/>
-       Name: <input type = "text"  name = "name" / ><br/>
-       Image: <input type= "img"  name= "color" /><br/>
-       Type: <input type = "text" name = "type"/><br/>
-       <input type = "submit" value = "Create Pokemon"/>
+      <h1>Add an Activity that you Completed!</h1>
+      <form action ="/activities" method="POST">
+       Description: <input type = "text"  name = "description" / ><br/>
+       Time Spent on the Activity (total minutes): <input type = "text" name = "timeSpent"/><br/>
+       <input type = "submit" value = "Add Activity"/>
     </form>
     </body>
+    <nav>
+      <a href="/activities/new">Add a New Activity that you Completed!</a><br/>
+      <a href="/activities">See List of All Completed Activities</a><br/>
+      <a href="/">*Reward, Please!* Top Page</a>
+    </nav>
   </html>

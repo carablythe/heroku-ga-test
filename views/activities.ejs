@@ -7,16 +7,16 @@
     <link href="http://fonts.cdnfonts.com/css/pokemon-solid" rel="stylesheet" font-family: 'Pokemon Solid', sans-serif>
   </head>
   <body>
-      <h1>Pokedex</h1>
-      <h2>ポケットモンスターのメニュー<h2>
+      <h1>You Completed Activities and Points Earned:</h1>
+      <h2>(You or your parent can delete the activity once you receive your reward.)<h2>
       <ul>
-        <% for (let i=0; i < pokemonX.length; i++){ %>
+        <% for (let i=0; i < activitiesX.length; i++){ %>
           <li>
-            <a href="/pokemon/<%=pokemonX[i].id%>">
-              <%=pokemonX[i].name%>
+            <a href="/activities/<%=activitiesX[i].id%>">
+              <%=activitiesX[i].description%>
             </a>
-            <form action = "/pokemon/
-            <%=pokemonX[i].id%>?_method=DELETE" method="POST">
+            <form action = "/activities/
+            <%=activitiesX[i].id%>?_method=DELETE" method="POST">
             <input type= "submit" value="DELETE"/>
           </form>
           <form action = "/activities/<%=activitiesX[i].id%>/edit">
@@ -27,6 +27,8 @@
       </ul>
   </body>
   <nav>
-  <a href="/activities/new">Add a New Pokemon to the Pokedex</a>
+    <a href="/activities/new">Add a New Activity that you Completed!</a><br/>
+    <a href="/activities">See List of All Completed Activities</a><br/>
+    <a href="/">*Reward, Please!* Top Page</a>
   </nav>
 </html>

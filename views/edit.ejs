@@ -1,25 +1,21 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
-    <meta charset="utf-8">
-    <title></title>
-    <link rel="stylesheet" href="/style.css">
-    <link href="http://fonts.cdnfonts.com/css/pokemon-solid" rel="stylesheet" font-family: 'Pokemon Solid', sans-serif>
+    <%-include('./partials/head.ejs')%>
   </head>
   <body>
-     <h1>Edit Pokemon</h1>
-     <form action ="/pokemon/<%=pokemonX._id%>?_method=PUT" method = "POST">
-        Name: <input type="text" name="name" value="<%=pokemonX.name%>"/>
+     <h1>Edit this Activity that you Completed!</h1>
+     <form action ="/activities/<%=activitiesX.id%>?_method=PUT" method = "POST">
+        Description: <input type="text" name="description" value="<%=activitiesX.description%>"/>
         <br/>
-        Type: <input type="text" name="type" value="<%=pokemonX.color%>"/>
-        <br/>
-        Stats: <input type="text" name="type" value="<%=pokemonX.stats%>"/>
-        <br/>
-        Moves: <input type="text" name="type" value="<%=pokemonX.moves%>"/>
-        <br/>
-        Damages: <input type="text" name="type" value="<%=pokemonX.damages%>"/>
+        Time Spent on the Activity (total minutes): <input type="text" name="timeSpent" value="<%=activitiesX.timeSpent%>"/>
         <br/>
         <input type="submit" value="Submit Changes">
      </form>
   </body>
+  <nav>
+    <a href="/activities/new">Add a New Activity that you Completed!</a><br/>
+    <a href="/activities">See List of All Completed Activities</a><br/>
+    <a href="/">*Reward, Please!* Top Page</a>
+  </nav>
 </html>

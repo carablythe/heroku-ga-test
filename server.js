@@ -4,6 +4,7 @@
 const express = require('express');
 const methodOverride  = require('method-override');
 const mongoose = require ('mongoose');
+const Reward = require('./models/Schema.js')
 const app = express ();
 const db = mongoose.connection;
 require('dotenv').config()
@@ -47,44 +48,45 @@ app.use(methodOverride('_method'));// allow POST, PUT and DELETE from a form
 //___________________
 // Routes
 //___________________
-//localhost:3000
+//localhost:3000 and index page set-up
 app.get('/' , (req, res) => {
-    res.send("new index page")
+    res.render("index.ejs")
 });
 
 //_____________________
 //Specific functions for this app below
 //_____________________
 
+// // Create "add a new activity" page:
+
 app.get('/activities/new', (req,res) => {
   res.render('new.ejs')
 })
 
+// // :
 app.get('/activities', (req,res) => {
-  Extra.find({}, (error, allActivities) => {
+  Reward.find({}, (error, allActivities) => {
     res.render(
       'activities.ejs',
       {
-        activitiesX: allActivties
+        activitiesX: allActivities
       }
     )
   })
 })
 
+// // Display a newly added activity on the list of Completed Activities:
 app.post('/activities', (req, res) => {
   Reward.create(req.body, (error, createdActivity) => {
     res.redirect('/activities')
   })
 })
 
-// app.delete('/pokemon/:id', (req, res) => {
-//   Pokemon.findByIdAndRemove(req.params.id, (error, data) => {
-//     res.redirect('/pokemon')
-//   })
-// })
 
+
+// // Delete an activity from the list of Completed Activities:
 app.delete('/activities/:id', (req, res) => {
-  Reward.findOneAndRemove({id:req.params.id}, (error, data) => {
+  Reward.findByIdAndRemove(req.params.id, (error, data) => {
     res.redirect('/activities')
   })
 })
@@ -96,45 +98,36 @@ app.delete('/activities/:id', (req, res) => {
 //   })
 // })
 //
-// Pokemon.create(pokeSeed, (err ,data) => {
-//   if (err) {
-//     console.log('err');
-//   }
-//   else {
-//     console.log('pokemon added to the dex');
-//   }
-// })
-// Pokemon.collection.drop()
-// Pokemon.count({}, (err, data) => {
-//   console.log(`there are ${data} pokemon in your pokedex`);
-// })
 
+// // Activities list page:
 
-app.put('/pokemon/:id', (req,res) => {
-  Pokemon.findByIdAndUpdate(req.params.id, req.body, {new:true},(error, updatedModel) => {
+app.put('/activities/:id', (req,res) => {
+  Reward.findByIdAndUpdate(req.params.id, req.body, {new:true},(error, updatedModel) => {
     if(error){
         console.log('err');
       } else{
-        res.redirect('/pokemon')
+        res.redirect('/activities')
       }
     })
   })
 
 
-app.get('/pokemon/:id', (req, res) => {
-    Reward.find({id:req.params.id}, (error, foundPokemon) => {
+// // Show each Completed Activity page:
+app.get('/activities/:id', (req, res) => {
+    Reward.findById(req.params.id, (error, foundActivity) => {
       res.render(
         'show.ejs',
         {
-          activitiesX: foundPokemon[0]
+          activitiesX: foundActivity
         }
       )
     })
   })
 
-app.get('/pokemon/:id/edit', (req, res) => {
-  Reward.findByIdAndUpdate(req.params.id, (error, foundActivity) => {
-    console.log(foundPokemon)
+// // Edit a Completed Activity page:
+app.get('/activities/:id/edit', (req, res) => {
+  Reward.findById(req.params.id, (error, foundActivity) => {
+    console.log(foundActivity)
     res.render(
       'edit.ejs',
       {
