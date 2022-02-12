@@ -8,7 +8,8 @@
       <form action ="/activities" method="POST">
        Description: <input type = "text"  name = "description" / ><br/>
        Time Spent on the Activity (total minutes): <input type = "text" name = "timeSpent"/><br/>
-       <input type = "submit" value = "Add Activity"/>
+       <input type = "submit" onclick="get ElementById("dateTimeStamp").innerHTML=Date()" value = "Add Activity"/>
+       <p id="dateTimeStamp"></p>
     </form>
     </body>
     <nav>

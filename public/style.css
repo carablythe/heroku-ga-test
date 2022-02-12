@@ -1,8 +1,8 @@
-html {font-family: '', sans-serif}
+html {font-family: 'Indie Flower', cursive}
 
 h1 {margin: 0vw 10vw}
 
-.showPage {background-image: url("");
-              background-size: cover;
-              background-repeat: no-repeat;
-              font-size: 3vw}
+body {background-image: url("https://img.freepik.com/free-vector/white-magnetic-board_158677-76.jpg?size=626&ext=jpg&ga=GA1.1.1513971856.1644019200");
+  background-size: cover;
+  background-repeat: no-repeat;
+  font-size: 2vw}

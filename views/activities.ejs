@@ -1,30 +1,39 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
-    <meta charset="utf-8">
-    <title>Pokedex</title>
-    <link rel="stylesheet" href="/style.css">
-    <link href="http://fonts.cdnfonts.com/css/pokemon-solid" rel="stylesheet" font-family: 'Pokemon Solid', sans-serif>
+      <%-include('./partials/head.ejs')%>
   </head>
   <body>
-      <h1>You Completed Activities and Points Earned:</h1>
+      <h1>Your Completed Activities and Points Earned:</h1>
       <h2>(You or your parent can delete the activity once you receive your reward.)<h2>
-      <ul>
-        <% for (let i=0; i < activitiesX.length; i++){ %>
-          <li>
-            <a href="/activities/<%=activitiesX[i].id%>">
-              <%=activitiesX[i].description%>
-            </a>
+      <table>
+        <tr>
+          <th>Date/Time of Activity:</th>
+          <th>Description of Activity:</th>
+          <th>Time Spent Doing this Activity:</th>
+        </tr>
+        <tr><% for(let i = 0; i < activitiesX.length; i++){ %>
+          <td><%=activitiesX[i].date%>
+          </td>
+          <td><a href= "/activities/<%=activitiesX[i].id%>">
+            <%=activitiesX[i].description%></a>
+          </td>
+          <td><%=activitiesX[i].timeSpent%> minutes
+          </td>
+          <td>
             <form action = "/activities/
             <%=activitiesX[i].id%>?_method=DELETE" method="POST">
-            <input type= "submit" value="DELETE"/>
-          </form>
-          <form action = "/activities/<%=activitiesX[i].id%>/edit">
-          <input type= "submit" value="EDIT"/>
-          </form>
-          </li>
-          <%} %>
-      </ul>
+            <input type= "submit" value="ERASE"/>
+            </form>
+          </td>
+          <td>
+            <form action = "/activities/              <%=activitiesX[i].id%>/edit">
+            <input type= "submit" value="EDIT"/>
+            </form>
+          </td>
+        </tr>
+        <% } %>
+      </table>
   </body>
   <nav>
     <a href="/activities/new">Add a New Activity that you Completed!</a><br/>
