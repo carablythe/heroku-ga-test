@@ -49,7 +49,7 @@ app.use(methodOverride('_method'));// allow POST, PUT and DELETE from a form
 //___________________
 //localhost:3000
 app.get('/' , (req, res) => {
-  res.send('Hello World!');
+    res.render('index.ejs')
 });
 
 //_____________________
@@ -63,7 +63,7 @@ app.get('/activities/new', (req,res) => {
 app.get('/activities', (req,res) => {
   Extra.find({}, (error, allActivities) => {
     res.render(
-      'index.ejs',
+      'activities.ejs',
       {
         activitiesX: allActivties
       }
@@ -71,9 +71,9 @@ app.get('/activities', (req,res) => {
   })
 })
 
-app.post('/pokemon', (req, res) => {
-  Pokemon.create(req.body, (error, createdPokemon) => {
-    res.redirect('/pokemon')
+app.post('/activities', (req, res) => {
+  Reward.create(req.body, (error, createdActivity) => {
+    res.redirect('/activities')
   })
 })
 
@@ -83,9 +83,9 @@ app.post('/pokemon', (req, res) => {
 //   })
 // })
 
-app.delete('/pokemon/:id', (req, res) => {
-  Pokemon.findOneAndRemove({id:req.params.id}, (error, data) => {
-    res.redirect('/pokemon')
+app.delete('/activities/:id', (req, res) => {
+  Reward.findOneAndRemove({id:req.params.id}, (error, data) => {
+    res.redirect('/activities')
   })
 })
 
@@ -122,7 +122,7 @@ app.put('/pokemon/:id', (req,res) => {
 
 
 app.get('/pokemon/:id', (req, res) => {
-    Pokemon.find({id:req.params.id}, (error, foundPokemon) => {
+    Reward.find({id:req.params.id}, (error, foundPokemon) => {
       res.render(
         'show.ejs',
         {
@@ -133,12 +133,12 @@ app.get('/pokemon/:id', (req, res) => {
   })
 
 app.get('/pokemon/:id/edit', (req, res) => {
-  Pokemon.find({id:req.params.id}, (error, foundPokemon) => {
+  Reward.findByIdAndUpdate(req.params.id, (error, foundActivity) => {
     console.log(foundPokemon)
     res.render(
       'edit.ejs',
       {
-        activitiesX: foundPokemon[0]
+        activitiesX: foundActivity
       }
     )
   })

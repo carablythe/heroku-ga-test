@@ -7,26 +7,10 @@
     <link href="http://fonts.cdnfonts.com/css/pokemon-solid" rel="stylesheet" font-family: 'Pokemon Solid', sans-serif>
   </head>
   <body>
-      <h1>Pokedex</h1>
-      <h2>ポケットモンスターのメニュー<h2>
-      <ul>
-        <% for (let i=0; i < pokemonX.length; i++){ %>
-          <li>
-            <a href="/pokemon/<%=pokemonX[i].id%>">
-              <%=pokemonX[i].name%>
-            </a>
-            <form action = "/pokemon/
-            <%=pokemonX[i].id%>?_method=DELETE" method="POST">
-            <input type= "submit" value="DELETE"/>
-          </form>
-          <form action = "/pokemon/<%=pokemonX[i].id%>/edit">
-          <input type= "submit" value="EDIT"/>
-          </form>
-          </li>
-          <%} %>
-      </ul>
+      <h1>Reward, Please!</h1>
+      <h2>Kids can become more responsible, more helpful, and get rewarded for it!<h2>
   </body>
   <nav>
-  <a href="/pokemon/new">Add a New Pokemon to the Pokedex</a>
+  <a href="/activities/new">Add an Activity that you Completed!</a>
   </nav>
 </html>
