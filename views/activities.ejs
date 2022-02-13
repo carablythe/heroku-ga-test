@@ -4,40 +4,37 @@
       <%-include('./partials/head.ejs')%>
   </head>
   <body>
-      <h1>Your Completed Activities and Points Earned:</h1>
-      <h2>(You or your parent can delete the activity once you receive your reward.)<h2>
+      <h1>Your Completed Activities:</h1>
+      <h3>You or your parent can delete the activity once you receive your reward.</h3>
       <table>
         <tr>
-          <th>Date/Time of Activity:</th>
-          <th>Description of Activity:</th>
-          <th>Time Spent Doing this Activity:</th>
+          <th>Date/Time:</th>
+          <th>Description:</th>
+          <th>Time Spent:</th>
         </tr>
         <tr><% for(let i = 0; i < activitiesX.length; i++){ %>
-          <td><%=activitiesX[i].date%>
+          <td><%=activitiesX[i].dateTime%>
           </td>
-          <td><a href= "/activities/<%=activitiesX[i].id%>">
+          <td><a href= "/activities/<%=activitiesX[i].id%>" class= "descriptionList">
             <%=activitiesX[i].description%></a>
           </td>
           <td><%=activitiesX[i].timeSpent%> minutes
           </td>
           <td>
-            <form action = "/activities/
-            <%=activitiesX[i].id%>?_method=DELETE" method="POST">
-            <input type= "submit" value="ERASE"/>
-            </form>
-          </td>
-          <td>
-            <form action = "/activities/              <%=activitiesX[i].id%>/edit">
-            <input type= "submit" value="EDIT"/>
+            <form action = "/activities/<%=activitiesX[i].id%>?_method=DELETE" method="POST">
+            <input type= "submit" value="ERASE" class="erase"/>
             </form>
           </td>
         </tr>
         <% } %>
       </table>
+      <div class= "new">
+          <a href="/activities/new">Add a New Activity that you Completed!</a><br/>
+      </div>
   </body>
-  <nav>
-    <a href="/activities/new">Add a New Activity that you Completed!</a><br/>
-    <a href="/activities">See List of All Completed Activities</a><br/>
-    <a href="/">*Reward, Please!* Top Page</a>
-  </nav>
+  <footer>
+    <a href="/" >
+      <img src="https://freesvg.org/img/Simple-House-Line-Art.png" alt="house" class="indexButton">
+    </a>
+  </footer>
 </html>

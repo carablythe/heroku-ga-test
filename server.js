@@ -124,10 +124,10 @@ app.get('/activities/:id', (req, res) => {
     })
   })
 
+
 // // Edit a Completed Activity page:
 app.get('/activities/:id/edit', (req, res) => {
   Reward.findById(req.params.id, (error, foundActivity) => {
-    console.log(foundActivity)
     res.render(
       'edit.ejs',
       {

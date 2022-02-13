@@ -4,14 +4,19 @@
     <%-include('./partials/head.ejs')%>
   </head>
   <body class= "showPage">
-    <h1>Activity Completed:</h1>
+    <h1>Completed Activity:</h1>
       </br>
-      Description of Activity:<%=activitiesX.description%></br>
-      Time Spent on the Activity (total minutes):<%=activitiesX.timeSpent%></br>
+      Date/Time of Activity: <%=activitiesX.dateTime%>
+      <br/>
+      Description of Activity: <%=activitiesX.description%>
+      </br>
+      Time Spent on the Activity: <%=activitiesX.timeSpent%> minutes
+      </br>
+    <form action = "/activities/<%=activitiesX.id%>/edit"> <input type= "submit" value="EDIT"/>
   </body>
-  <nav>
-    <a href="/activities/new">Add a New Activity that you Completed!</a><br/>
-    <a href="/activities">See List of All Completed Activities</a><br/>
-    <a href="/">*Reward, Please!* Top Page</a>
-  </nav>
+  <footer>
+    <a href="/" >
+      <img src="https://freesvg.org/img/Simple-House-Line-Art.png" alt="house" class="indexButton">
+    </a>
+  </footer>
 </html>

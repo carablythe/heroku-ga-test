@@ -4,17 +4,18 @@
       <%-include('./partials/head.ejs')%>
     </head>
     <body>
-      <h1>Add an Activity that you Completed!</h1>
+      <h1>Add an Activity You Completed!</h1>
       <form action ="/activities" method="POST">
-       Description: <input type = "text"  name = "description" / ><br/>
-       Time Spent on the Activity (total minutes): <input type = "text" name = "timeSpent"/><br/>
-       <input type = "submit" onclick="get ElementById("dateTimeStamp").innerHTML=Date()" value = "Add Activity"/>
-       <p id="dateTimeStamp"></p>
-    </form>
+       Date/Time: <input type="text" name="dateTime"/>
+       <br/>
+       Description: <input type = "text"  name = "description"/><br/>
+       Time Spent on the Activity: <input type = "text" name = "timeSpent"/> minutes<br/>
+       <input type = "submit"  value = "Add Activity"/>
+      </form>
     </body>
-    <nav>
-      <a href="/activities/new">Add a New Activity that you Completed!</a><br/>
-      <a href="/activities">See List of All Completed Activities</a><br/>
-      <a href="/">*Reward, Please!* Top Page</a>
-    </nav>
+    <footer>
+      <a href="/" >
+        <img src="https://freesvg.org/img/Simple-House-Line-Art.png" alt="house" class="indexButton">
+      </a>
+    </footer>
   </html>
