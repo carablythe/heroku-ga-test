@@ -3,16 +3,21 @@
   <head>
     <%-include('./partials/head.ejs')%>
   </head>
-  <body class= "showPage">
+  <body>
     <h1>Completed Activity:</h1>
-      </br>
-      Date/Time of Activity: <%=activitiesX.dateTime%>
-      <br/>
-      Description of Activity: <%=activitiesX.description%>
-      </br>
-      Time Spent on the Activity: <%=activitiesX.timeSpent%> minutes
-      </br>
-    <form action = "/activities/<%=activitiesX.id%>/edit"> <input type= "submit" value="EDIT"/>
+    <table>
+      <tr>
+        <th>Date/Time:</th>
+        <th>Description:</th>
+        <th>Time Spent:</th>
+      </tr>
+      <tr>
+        <td><%=activitiesX.dateTime%></td>
+        <td><%=activitiesX.description%></td>
+        <td><%=activitiesX.timeSpent%>minutes</td>
+        <td>
+          <form action = "/activities/<%=activitiesX.id%>/edit"> <input type= "submit"  class= "submit" value="EDIT"/>
+        </td>
   </body>
   <footer>
     <a href="/" >

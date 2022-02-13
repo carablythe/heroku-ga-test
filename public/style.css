@@ -1,17 +1,17 @@
-html {
+html, input {
   font-family: 'Indie Flower', cursive
 }
 
 /* Headings */
 h1 {
-  margin: 6vw 10vw 1vw 10vw;
+  margin: 6vw 12vw 1vw 12vw;
   text-align: center;
   color: purple;
   font-size: 5vw;
 }
 
 h2, h3 {
-  margin: 1vw 10vw 2vw 12vw;
+  margin: 1.5vw 12vw 1.5vw 12vw;
   text-align: center;
   color: green;
 }
@@ -23,36 +23,47 @@ h3 {
 /* BACKGROUND IMAGE */
 body {
   background-image: url("https://img.freepik.com/free-vector/white-magnetic-board_158677-76.jpg?size=626&ext=jpg&ga=GA1.1.1513971856.1644019200");
-  background-size: cover;
-  background-repeat: no-repeat
+  background-size: 100%;
+  background-repeat: no-repeat;
 }
 
 /* TABLE styling on Activities List page */
-table {
-  margin: 1vw 12vw;
+table, .input {
+  margin: 2vw 12vw 2vw 12vw;
   font-size: 2.5vw;
 }
 
-td {
+td, .inputField {
    padding: 1vw 3vw 1vw 0vw;
    color: red;
+   font-size: 2.5vw;
 }
 
-th {
-  text-align: left;
-   padding: 0vw 4vw 1vw 0vw;
+th, .input {
+   text-align: left;
+   padding: 1vw 4vw 1vw 0vw;
    color: blue;
 }
 
 /* DELETE/ERASER BUTTON */
 .erase {
   background-color: #F5E050;
-  font-size: 2vw;
+  font-size: 2.5vw;
 }
 
 .erase:hover {
-    cursor: pointer;
-    transform: rotate(45deg);
+  cursor: pointer;
+  transform: rotate(45deg);
+}
+
+/* OTHER SUBMIT BUTTONS */
+.submit {
+  background-color: red;
+  font-size: 2.5vw;
+}
+
+.submit:hover {
+  cursor: pointer;
 }
 
 
@@ -75,10 +86,10 @@ a {
 }
 
 /* FOOTER (HOUSE ICON) */
+
 .indexButton {
   width: 10%;
   float: right;
-  margin: 1vw 10vw 2vw 10vw;
 }
 
 .indexButton:hover {

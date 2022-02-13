@@ -5,14 +5,14 @@
   </head>
   <body>
     <h1>Edit this Completed Activity!</h1>
-    <form action ="/activities/<%=activitiesX.id%>?_method=PUT" method = "POST">
-       Date: <input type="text" name="dateTime" value="<%=activitiesX.dateTime%>"/>
+    <form action ="/activities/<%=activitiesX.id%>?_method=PUT" method = "POST" class="input">
+       Date/Time of the Activity: <input type="text" name="dateTime" class= "inputField" value="<%=activitiesX.dateTime%>"/>
        <br/>
-       Description: <input type="text" name="description" value="<%=activitiesX.description%>"/>
+       Description of the Activity: <input type="text" name="description" class= "inputField" value="<%=activitiesX.description%>"/>
        <br/>
-       Time Spent on the Activity: <input type="text" name="timeSpent" value="<%=activitiesX.timeSpent%>"/> minutes
+       Time Spent on the Activity: <input type="text" name="timeSpent" class= "inputField" value="<%=activitiesX.timeSpent%>"/> minutes
        <br/>
-       <input type="submit" value="Submit Changes">
+       <input type="submit"  class= "submit" value="Save Changes">
     </form>
   </body>
   <footer>
