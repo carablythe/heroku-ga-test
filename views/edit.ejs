@@ -4,6 +4,11 @@
     <%-include('./partials/head.ejs')%>
   </head>
   <body>
+    <header>
+      <a href="/" >
+        <img src="https://freesvg.org/img/Simple-House-Line-Art.png" alt="house" class="indexButton">
+      </a>
+    </header>
     <h1>Edit this Completed Activity!</h1>
     <form action ="/activities/<%=activitiesX.id%>?_method=PUT" method = "POST" class="input">
        Date/Time of the Activity: <input type="text" name="dateTime" class= "inputField" value="<%=activitiesX.dateTime%>"/>
@@ -15,9 +20,4 @@
        <input type="submit"  class= "submit" value="Save Changes">
     </form>
   </body>
-  <footer>
-    <a href="/" >
-      <img src="https://freesvg.org/img/Simple-House-Line-Art.png" alt="house" class="indexButton">
-    </a>
-  </footer>
 </html>

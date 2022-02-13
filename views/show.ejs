@@ -4,6 +4,11 @@
     <%-include('./partials/head.ejs')%>
   </head>
   <body>
+    <header>
+      <a href="/" >
+        <img src="https://freesvg.org/img/Simple-House-Line-Art.png" alt="house" class="indexButton">
+      </a>
+    </header>
     <h1>Completed Activity:</h1>
     <table>
       <tr>
@@ -19,9 +24,5 @@
           <form action = "/activities/<%=activitiesX.id%>/edit"> <input type= "submit"  class= "submit" value="EDIT"/>
         </td>
   </body>
-  <footer>
-    <a href="/" >
-      <img src="https://freesvg.org/img/Simple-House-Line-Art.png" alt="house" class="indexButton">
-    </a>
-  </footer>
+
 </html>

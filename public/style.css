@@ -2,6 +2,18 @@ html, input {
   font-family: 'Indie Flower', cursive
 }
 
+/* HEADER (HOUSE ICON) */
+
+.indexButton {
+  width: 10%;
+  float: right;
+  margin: 1vw 5vw;
+}
+
+.indexButton:hover {
+  transform: rotate(180deg);
+}
+
 /* Headings */
 h1 {
   margin: 6vw 12vw 1vw 12vw;
@@ -10,14 +22,15 @@ h1 {
   font-size: 5vw;
 }
 
-h2, h3 {
+h3 {
   margin: 1.5vw 12vw 1.5vw 12vw;
   text-align: center;
-  color: green;
-}
-
-h3 {
+  color: yellow;
   font-size: 3vw;
+  text-shadow: -1px -1px 0 #000,
+		            1px -1px 0 #000,
+		           -1px 1px 0 #000,
+		            1px 1px 0 #000;
 }
 
 /* BACKGROUND IMAGE */
@@ -27,23 +40,56 @@ body {
   background-repeat: no-repeat;
 }
 
-/* TABLE styling on Activities List page */
-table, .input {
-  margin: 2vw 12vw 2vw 12vw;
-  font-size: 2.5vw;
+/* HOMEPAGE flexbox*/
+.container {
+  display: flex;
+  column-count: 2;
+  justify-content: space-around;
 }
 
-td, .inputField {
+.morningChecklist {
+  flex: 1;
+  text-align: left;
+  color: blue;
+  font-size: 2.5vw;
+  margin: 0vw 1vw 1vw 11vw;
+  padding: 0vw 4vw 1vw 4vw;
+}
+
+.extraActivities {
+  text-align: center;
+}
+
+.extraActivityButton {
+  border-radius: 40%;
+}
+
+.beforeBedChecklist  {
+   flex: 2;
+   text-align: left;
+   color: green;
+   font-size: 2.5vw;
+   margin: 0vw 0vw 1vw 15vw;
+}
+
+/* TABLE on Activities List page and Checklists on HomePage*/
+table, .input {
+  margin: 2vw 12vw 2vw 12vw;
+}
+
+td, .inputField{
    padding: 1vw 3vw 1vw 0vw;
    color: red;
    font-size: 2.5vw;
 }
 
-th, .input {
+th, .input  {
    text-align: left;
    padding: 1vw 4vw 1vw 0vw;
    color: blue;
+   font-size: 2.5vw;
 }
+
 
 /* DELETE/ERASER BUTTON */
 .erase {
@@ -60,10 +106,12 @@ th, .input {
 .submit {
   background-color: red;
   font-size: 2.5vw;
+  text-align: center;
 }
 
 .submit:hover {
   cursor: pointer;
+  filter: invert(1);
 }
 
 
@@ -83,15 +131,4 @@ a {
   font-size: 2.5vw;
   color: green;
   text-decoration: underline;
-}
-
-/* FOOTER (HOUSE ICON) */
-
-.indexButton {
-  width: 10%;
-  float: right;
-}
-
-.indexButton:hover {
-  transform: rotate(180deg);
 }

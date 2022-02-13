@@ -4,17 +4,43 @@
       <%-include('./partials/head.ejs')%>
   </head>
   <body>
-      <h1>Reward, Please!</h1>
-      <h2>Kids can become more responsible, more helpful, and get rewarded for it!<h2>
-      <br/>
-      <a href="/activities/new" class="new">Add a New Activity that you Completed!</a>
-      <br/>
-      <a href="/activities" class= "list">See List of All Completed Activities</a>
-      <br/>
+    <h1>Reward, Please!</h1>
+    <h3>Kids can become more responsible, more helpful, and get rewarded for it!</h3>
+    <div class="container">
+      <div class="morningChecklist">
+        Morning Checklist:
+        <br/>
+        <input type="checkbox"/> Eat breakfast
+        <br/>
+        <input type="checkbox"/> Go to the toilet
+        <br/>
+        <input type="checkbox"/> Get dressed
+        <br/>
+        <input type="checkbox"/> Brush hair
+        <br/>
+        <input type="checkbox"/> Brush teeth
+        <br/>
+        <input type="submit" class="submit" value="Finished!">
+      </div>
+      <div class="beforeBedChecklist">
+        Before-Bed Checklist:
+        <br/>
+        <input type="checkbox"/> Homework
+        <br/>
+        <input type="checkbox"/> Go to the toilet
+        <br/>
+        <input type="checkbox"/> Bath/Shower
+        <br/>
+        <input type="checkbox"/> Pajamas on
+        <br/>
+        <input type="checkbox"/> Brush teeth
+        <br/>
+        <input type="submit" class="submit" value="Finished!">
+      </div>
+    </div>
+    <div class= "extraActivities">
+        <button class="extraActivityButton"><a href="/activities">Extra Activities!</a>
+        </button>
+    </div>
   </body>
-  <footer>
-    <a href="/" >
-      <img src="https://freesvg.org/img/Simple-House-Line-Art.png" alt="house" class="indexButton">
-    </a>
-  </footer>
 </html>
