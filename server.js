@@ -63,6 +63,12 @@ app.get('/activities/new', (req,res) => {
   res.render('new.ejs')
 })
 
+
+// // Create "Checklist Reward" page:
+app.get('/checklist_reward', (req, res) => {
+    res.render("checklist_reward.ejs")
+});
+
 // // :
 app.get('/activities', (req,res) => {
   Reward.find({}, (error, allActivities) => {
