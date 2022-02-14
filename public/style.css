@@ -7,7 +7,7 @@ html, input {
 .indexButton {
   width: 10%;
   float: right;
-  margin: 1vw 5vw;
+  margin: 2vw 5vw;
 }
 
 .indexButton:hover {
@@ -16,17 +16,16 @@ html, input {
 
 /* Headings */
 h1 {
-  margin: 6vw 12vw 1vw 12vw;
+  margin: 6vw 12vw 0vw 12vw;
   text-align: center;
   color: purple;
   font-size: 5vw;
 }
 
 h3 {
-  margin: 1.5vw 12vw 1.5vw 12vw;
-  text-align: center;
+  margin: 1.5vw 5vw 1.5vw 15vw;
   color: yellow;
-  font-size: 3vw;
+  font-size: 2.5vw;
   text-shadow: -1px -1px 0 #000,
 		            1px -1px 0 #000,
 		           -1px 1px 0 #000,
@@ -52,16 +51,19 @@ body {
   text-align: left;
   color: blue;
   font-size: 2.5vw;
-  margin: 0vw 1vw 1vw 11vw;
-  padding: 0vw 4vw 1vw 4vw;
+  margin: 0vw 1vw 1vw 15vw;
 }
 
-.extraActivities {
+.goodJob {
   text-align: center;
+  width: 10vw;
+  height: 10vw;
+  margin: 5vw 3vw;
 }
 
-.extraActivityButton {
-  border-radius: 40%;
+.goodJob:hover {
+  cursor: pointer;
+  transform: scale(2);
 }
 
 .beforeBedChecklist  {
@@ -69,23 +71,37 @@ body {
    text-align: left;
    color: green;
    font-size: 2.5vw;
-   margin: 0vw 0vw 1vw 15vw;
+   margin: 0vw 0vw 1vw 3vw;
 }
 
+.extraActivities {
+  width: 10vw;
+  height: 10vw;
+  margin: 0vw 40vw;
+}
+
+.extraActivityButton:hover {
+  cursor: pointer;
+  transform: rotate(270deg);
+}
+
+.done:hover {
+  filter:invert(1);
+}
 /* TABLE on Activities List page and Checklists on HomePage*/
 table, .input {
-  margin: 2vw 12vw 2vw 12vw;
+  margin: 2vw 6vw 2vw 12vw;
 }
 
 td, .inputField{
-   padding: 1vw 3vw 1vw 0vw;
+   padding: 1vw 2vw 1vw 0vw;
    color: red;
    font-size: 2.5vw;
 }
 
 th, .input  {
    text-align: left;
-   padding: 1vw 4vw 1vw 0vw;
+   padding: 1vw 2vw 1vw 0vw;
    color: blue;
    font-size: 2.5vw;
 }
@@ -94,12 +110,29 @@ th, .input  {
 /* DELETE/ERASER BUTTON */
 .erase {
   background-color: #F5E050;
-  font-size: 2.5vw;
+  font-size: 2vw;
 }
 
 .erase:hover {
   cursor: pointer;
   transform: rotate(45deg);
+}
+
+/* Add a New Activity DIV on Completed Activities Page */
+
+.newDiv {
+  font-size: 3vw;
+  color: green;
+  display:inline;
+  margin: 0vw 1vw 2vw 16vw;
+}
+
+.newDiv:hover, .descriptionList:hover {
+  filter: invert(1);
+}
+
+.new:hover {
+  transform: rotate(30deg);
 }
 
 /* OTHER SUBMIT BUTTONS */
@@ -114,21 +147,13 @@ th, .input  {
   filter: invert(1);
 }
 
-
 /* LINKS */
 a {
   text-decoration: none;
   color:inherit;
 }
 
-.new:hover, .descriptionList:hover {
-  text-transform: uppercase;
-  filter: invert(1);
-}
 
-.new {
-  margin: 1vw 12vw;
-  font-size: 2.5vw;
-  color: green;
-  text-decoration: underline;
+/* The below is the set-up for all html files' smaller device views: */
+@media (max-width: 600px) {
 }
