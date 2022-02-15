@@ -20,6 +20,10 @@ const PORT = process.env.PORT || 3003;
 // How to connect to the database either via heroku or locally
 const MONGODB_URI = process.env.MONGODB_URI;
 
+//bcrypt to encrypt users' passwords
+const bcrypt = require('bcrypt')
+const hashedString = bcrypt.hashSync('yourStringHere', bcrypt.genSaltSync(10))
+
 // Connect to Mongo &
 // Fix Depreciation Warnings from Mongoose
 // May or may not need these depending on your Mongoose version
@@ -97,13 +101,6 @@ app.delete('/activities/:id', (req, res) => {
   })
 })
 
-// // seed
-// app.get('/pokemon/seed', (req,res) => {
-//   Pokemon.create(pokeSeed, (err, resetPokemon) => {
-//     res.redirect('/pokemon')
-//   })
-// })
-//
 
 // // Activities list page:
 

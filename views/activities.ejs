@@ -18,17 +18,20 @@
       <h3>You or your parent can delete the activity once you receive your reward.</h3>
       <table>
         <tr>
-          <th>Date/Time:</th>
+          <th>Day:</th>
           <th>Description:</th>
           <th>Time Spent:</th>
+          <th>Points Earned:</th>
         </tr>
-        <tr><% for(let i = 0; i < activitiesX.length; i++){ %>
-          <td><%=activitiesX[i].dateTime%>
-          </td>
+        <tr><% for(let i = 0; i < activitiesX.length; i++){
+          %>
+          <td><%=activitiesX[i].day%></td>
           <td><a href= "/activities/<%=activitiesX[i].id%>" class= "descriptionList">
             <%=activitiesX[i].description%></a>
           </td>
           <td><%=activitiesX[i].timeSpent%> minutes
+          </td>
+          <td><%=activitiesX[i].points%> minutes
           </td>
           <td>
             <form action = "/activities/<%=activitiesX[i].id%>?_method=DELETE" method="POST">

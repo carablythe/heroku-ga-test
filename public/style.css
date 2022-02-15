@@ -16,7 +16,7 @@ html, input {
 
 /* Headings */
 h1 {
-  margin: 6vw 12vw 0vw 12vw;
+  margin: 6vw 4vw 0vw 13vw;
   text-align: center;
   color: purple;
   font-size: 5vw;
@@ -30,6 +30,12 @@ h3 {
 		            1px -1px 0 #000,
 		           -1px 1px 0 #000,
 		            1px 1px 0 #000;
+}
+
+h4 {
+  margin: 1.5vw 5vw 1.5vw 15vw;
+  text-align: center;
+  font-size: 2vw;
 }
 
 /* BACKGROUND IMAGE */
@@ -66,6 +72,7 @@ body {
   column-count: 2;
   color: green;
   font-size: 2.5vw;
+  margin: 0vw 0vw 5vw 0vw;
 }
 
 .extraExplanation {
@@ -76,7 +83,7 @@ body {
 .extraActivityButton {
     width: 10vw;
     float: right;
-    margin: 0vw 5vw 3vw 2vw;
+    margin: 0vw 5vw 5vw 10vw;
 }
 
 .extraActivityButton:hover {
@@ -90,10 +97,10 @@ body {
 
 /* TABLE on Activities List page,  Checklists on HomePage and list on Checklist Reward page*/
 table, .input {
-  margin: 2vw 6vw 2vw 12vw;
+  margin: 1vw 6vw 1vw 12vw;
 }
 
-td, .inputField{
+td {
    padding: 1vw 2vw 1vw 0vw;
    color: red;
    font-size: 2.5vw;
@@ -101,10 +108,21 @@ td, .inputField{
 
 th, .input, li  {
    text-align: left;
-   padding: 1vw 2vw 1vw 0vw;
+   padding: 1vw 2vw 2vw 0vw;
    color: blue;
    font-size: 2.5vw;
 }
+
+ul {
+  margin: 2vw 2vw 2vw 10vw;
+}
+
+.inputField{
+   padding: 1vw 2vw 1vw 0vw;
+   color: red;
+   font-size: 2vw;
+}
+
 
 ul {
   margin: 2vw 2vw 2vw 10vw;
@@ -155,6 +173,7 @@ li {
 .submit {
   background-color: red;
   font-size: 2.5vw;
+  float: right;
   text-align: center;
   box-shadow: 1vw 1vw 1vw gray;
   border: .5vw solid black;
