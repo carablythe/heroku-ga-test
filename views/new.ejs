@@ -11,20 +11,16 @@
       </header>
       <h1>Add an Activity You Completed!</h1>
       <form action ="/activities" method="POST" class= "input">
-       Description of the Activity:
-         <br/>
-         <input type="checkbox" name="dishes" class="description"/> Do dishes
-         <input type="checkbox" name="vacuum" class="description"/> Vacuum
-         <input type="checkbox" name="laundry" class="description"/> Hang laundry
-         <input type="checkbox" name="cook" class="description"/> Help cook
+        Description of the Activity:
+         <input type = "text"  name = "description" class="inputField"/>
         <br/>
-         <input type="checkbox" name="tidy" class="description"/> Tidy room
-         <input type="checkbox" name="plants" class="description"/> Water plants
-         <input type="checkbox" name="other" class="description"/> Other: <input type = "text"  name = "otherActivity" class="inputField"/><br/>
-         <br/>
-         Day of the Activity: <input type="text" name="day" class= "inputField"/><br/>
-         Time Spent on the Activity: <input type = "text" name = "timeSpent" class= "inputField"/> minutes<br/>
-        <input type = "submit"  class= "submit" value = "Add Activity"/>
+        Day of the Activity:
+        <input type="text" name="day" class= "inputField"/>
+        <br/>
+        Time Spent on the Activity:
+        <input type = "text" name = "timeSpent" class= "inputField"/> minutes (also number of points you earn)
+        <br/>
+        <input type = "submit"  class= "submit" id="newEdit" value = "Add Activity"/>
       </form>
     </body>
     <div class= "extraActivities">

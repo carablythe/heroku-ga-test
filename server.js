@@ -92,15 +92,12 @@ app.post('/activities', (req, res) => {
   })
 })
 
-
-
 // // Delete an activity from the list of Completed Activities:
 app.delete('/activities/:id', (req, res) => {
   Reward.findByIdAndRemove(req.params.id, (error, data) => {
     res.redirect('/activities')
   })
 })
-
 
 // // Activities list page:
 

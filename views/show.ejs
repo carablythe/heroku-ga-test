@@ -15,37 +15,18 @@
       <tr>
         <th>Day: </th>
         <th>Description: </th>
-        <th>Time Spent: </th>
-        <th>Points Earned: </th>
+        <th>Time Spent/ Points: </th>
+        <th></th>
       </tr>
       <tr>
         <td><%=activitiesX.day%></td>
-        <td><% if (activitiesX.description.dishes   ===         true) { %>
-                Did the dishes
-            <%} else if (activitiesX.description.vacuum === true) { %>
-                Vacuumed
-            <%} else if (activitiesX.description.laundry === true) { %>
-                Hung the laundry
-            <%} else if (activitiesX.description.cook === true) { %>
-                Helped cook
-            <%} else if (activitiesX.description.tidy === true) { %>
-                Tidied room
-            <%} else if (activitiesX.description.plants === true) { %>
-                Watered plants
-            <%} else if (activitiesX.description.other === true) { %>
-
-            <%} else
-
-        else if (activitiesX.description.vacuum === true) { %>
-          Vacuumed</td>
-        <td><%=activitiesX.timeSpent%>minutes</td>
-        <td><%=activitiesX.points%></td>
-        <td>
-          <form action = "/activities/<%=activitiesX.id%>/edit"> <input type= "submit"  class= "submit" value="EDIT"/>
-        </td>
-      </table>
-  </body>
+        <td><%=activitiesX.description%></td>
+        <td><%=activitiesX.timeSpent%> minutes/ points</td>
+        <td><form action = "/activities/<%=activitiesX.id%>/edit"> <input type= "submit"  class= "submit" value="EDIT"/></td>
+      </tr>
+    </table>
   <div class= "extraActivities">
       <a href="/activities"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTJX19pvyPpYFJUNlPQrTs8uKlfwRS3-yi1ZC6_nTWAW34ZwLyRoP19GKqWe4ZuT6zya2Y&usqp=CAU" class="extraActivityButton" width="100%"></a>
   </div>
+  </body>
 </html>

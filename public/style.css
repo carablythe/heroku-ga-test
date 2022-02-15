@@ -23,7 +23,7 @@ h1 {
 }
 
 h3 {
-  margin: 1.5vw 5vw 1.5vw 15vw;
+  margin: 1.5vw 10vw 1vw 15vw;
   color: yellow;
   font-size: 2.5vw;
   text-shadow: -1px -1px 0 #000,
@@ -96,19 +96,19 @@ body {
 }
 
 /* TABLE on Activities List page,  Checklists on HomePage and list on Checklist Reward page*/
-table, .input {
-  margin: 1vw 6vw 1vw 12vw;
+table, .input, .totalPoints{
+  margin: 1vw 4vw 5vw 12vw;
 }
 
 td {
-   padding: 1vw 2vw 1vw 0vw;
+   padding: 1vw 2vw 1vw 1vw;
    color: red;
    font-size: 2.5vw;
 }
 
-th, .input, li  {
+th, .input, li, .totalPoints {
    text-align: left;
-   padding: 1vw 2vw 2vw 0vw;
+   padding: 1vw 2vw 0vw 1vw;
    color: blue;
    font-size: 2.5vw;
 }
@@ -122,7 +122,6 @@ ul {
    color: red;
    font-size: 2vw;
 }
-
 
 ul {
   margin: 2vw 2vw 2vw 10vw;
@@ -173,8 +172,6 @@ li {
 .submit {
   background-color: red;
   font-size: 2.5vw;
-  float: right;
-  text-align: center;
   box-shadow: 1vw 1vw 1vw gray;
   border: .5vw solid black;
   border-radius: 1vw;
@@ -183,6 +180,10 @@ li {
 .submit:hover {
   cursor: pointer;
   filter: invert(1);
+}
+
+#newEdit {
+  margin: 2vw 5vw 2vw 50vw;
 }
 
 /* LINKS */

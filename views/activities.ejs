@@ -15,23 +15,22 @@
           <img src= "https://cdn-icons-png.flaticon.com/512/4100/4100473.png" width= "9%" class= "new">Add a New Activity that you Completed!
         </a>
       </div>
-      <h3>You or your parent can delete the activity once you receive your reward.</h3>
+      <h3>Talk to you parents about what rewards you can get. You or your parent can delete the activity once you receive your reward.</h3>
       <table>
         <tr>
           <th>Day:</th>
           <th>Description:</th>
-          <th>Time Spent:</th>
-          <th>Points Earned:</th>
+          <th>Time Spent/Points:</th>
+          <th></th>
         </tr>
-        <tr><% for(let i = 0; i < activitiesX.length; i++){
-          %>
-          <td><%=activitiesX[i].day%></td>
+        <tr><% for(let i = 0; i < activitiesX.length; i++)
+         { %>
+          <td><%=activitiesX[i].day%>
+          </td>
           <td><a href= "/activities/<%=activitiesX[i].id%>" class= "descriptionList">
             <%=activitiesX[i].description%></a>
           </td>
-          <td><%=activitiesX[i].timeSpent%> minutes
-          </td>
-          <td><%=activitiesX[i].points%> minutes
+          <td><%=activitiesX[i].timeSpent%> minutes/points
           </td>
           <td>
             <form action = "/activities/<%=activitiesX[i].id%>?_method=DELETE" method="POST">
@@ -41,5 +40,10 @@
         </tr>
         <% } %>
       </table>
+      <div class = "totalPoints">
+      <% sum = 0; for(let i = 0; i < activitiesX.length; i++)
+       {sum += activitiesX[i].timeSpent} %>
+       Total Points Earned: <%=sum%>
+     </div>
   </body>
 </html>
