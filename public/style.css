@@ -41,7 +41,7 @@ h4 {
 /* BACKGROUND IMAGE */
 body {
   background-image: url("https://img.freepik.com/free-vector/white-magnetic-board_158677-76.jpg?size=626&ext=jpg&ga=GA1.1.1513971856.1644019200");
-  background-size: 100%;
+  background-size: 100% 100%;
   background-repeat: no-repeat;
 }
 
@@ -57,7 +57,7 @@ body {
   color: blue;
   font-size: 2.5vw;
   width: 20vw;
-  margin: 0vw 1vw 1vw 15vw;
+  margin: 0vw 1vw 0vw 15vw;
 }
 
 .beforeBedChecklist  {
@@ -66,7 +66,7 @@ body {
    color: red;
    font-size: 2.5vw;
    width: 20vw;
-   margin: 0vw -15vw 1vw 10vw;
+   margin: 0vw -15vw 0vw 10vw;
 }
 
 .extraActivities {
@@ -115,7 +115,7 @@ th, .input, li {
 }
 
 .totalPoints{
-  margin: 1vw 1vw 5vw 13vw;
+  margin: 0vw 0vw 10vw 12vw;
   text-align: left;
   color: purple;
   font-size: 2.8vw;
