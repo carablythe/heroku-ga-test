@@ -7,7 +7,7 @@ html, input {
 .indexButton {
   width: 10%;
   float: right;
-  margin: 2vw 5vw;
+  margin: 2vw 5vw 2vw 0vw;
 }
 
 .indexButton:hover {
@@ -49,7 +49,6 @@ body {
 .container {
   display: flex;
   column-count: 2;
-  justify-content: space-around;
 }
 
 .morningChecklist {
@@ -57,6 +56,7 @@ body {
   text-align: left;
   color: blue;
   font-size: 2.5vw;
+  width: 20vw;
   margin: 0vw 1vw 1vw 15vw;
 }
 
@@ -65,25 +65,26 @@ body {
    text-align: left;
    color: red;
    font-size: 2.5vw;
-   margin: 0vw 0vw 1vw 20vw;
+   width: 20vw;
+   margin: 0vw -15vw 1vw 10vw;
 }
 
 .extraActivities {
   column-count: 2;
   color: green;
   font-size: 2.5vw;
-  margin: 0vw 0vw 5vw 0vw;
 }
 
 .extraExplanation {
-  width: 70vw;
-  margin: 0vw 0vw 3vw 15vw;
+  width: 60vw;
+  margin: 0vw 1vw 15vw 13vw;
+  text-align: center;
 }
 
 .extraActivityButton {
     width: 10vw;
     float: right;
-    margin: 0vw 5vw 5vw 10vw;
+    margin: 1vw 7vw 15vw 10vw;
 }
 
 .extraActivityButton:hover {
@@ -95,9 +96,9 @@ body {
   filter:hue-rotate(90deg);
 }
 
-/* TABLE on Activities List page,  Checklists on HomePage and list on Checklist Reward page*/
-table, .input, .totalPoints{
-  margin: 1vw 4vw 5vw 12vw;
+/* TABLE on Activities List page, Checklists on HomePage and list on Checklist Reward page*/
+table, .input {
+  margin: 1vw 4vw 2vw 12vw;
 }
 
 td {
@@ -106,11 +107,19 @@ td {
    font-size: 2.5vw;
 }
 
-th, .input, li, .totalPoints {
+th, .input, li {
    text-align: left;
    padding: 1vw 2vw 0vw 1vw;
    color: blue;
    font-size: 2.5vw;
+}
+
+.totalPoints{
+  margin: 1vw 1vw 5vw 13vw;
+  text-align: left;
+  color: purple;
+  font-size: 2.8vw;
+  text-shadow: .1vw .1vw blue;
 }
 
 ul {
@@ -134,7 +143,7 @@ li {
 .goodJob {
   width: 15vw;
   height: 15vw;
-  margin: 5vw 5vw;
+  margin: 5vw 5vw 0vw 5vw;
 }
 
 /* DELETE/ERASER BUTTON */
@@ -183,7 +192,7 @@ li {
 }
 
 #newEdit {
-  margin: 2vw 5vw 2vw 50vw;
+  margin: 2vw 5vw 0vw 50vw;
 }
 
 /* LINKS */
