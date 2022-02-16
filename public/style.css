@@ -204,14 +204,14 @@ a {
   /* Headings */
   h1 {
     font-size: 5vw;
-    margin-top: 15vw;
+    margin: 15vw 15vw 1vw 5vw;
   }
 
-  h2, h3, .totalPoints   {
+  h2 {
     font-size: 4vw;
   }
 
- h4, body, td, th, li, .input, .newDiv, .inputField, .submit, .erase, .extraActivities {
+ h3, h4, body, td, th, li, table, .totalPoints,  .input, .newDiv, .inputField, .submit, .erase, .extraActivities {
     font-size: 3.5vw;
   }
 
@@ -224,7 +224,7 @@ a {
   }
 
   .totalPoints {
-    margin: 0vw 0vw 20vw 12vw;
+    margin: 0vw 0vw 25vw 12vw;
   }
 
   .extraActivities {
