@@ -12,15 +12,15 @@
       <h1>Your Completed Activities:</h1>
       <div class= "newDiv">
         <a href="/activities/new">
-          <img src= "https://cdn-icons-png.flaticon.com/512/4100/4100473.png" width= "9%" class= "new">Add a New Activity that you Completed!
+          <img src= "https://cdn-icons-png.flaticon.com/512/4100/4100473.png" width= "9%" class= "new" >Add a New Activity that you Completed!
         </a>
       </div>
-      <h3>Talk to you parents about what rewards you can get. You or your parent can delete the activity once you receive your reward.</h3>
+      <h3>Talk to you parent(s) about what rewards you can get. You or your parent(s) can delete the activity once you receive your reward.</h3>
       <table>
         <tr>
           <th>Day:</th>
           <th>Description:</th>
-          <th>Time Spent/Points:</th>
+          <th>Time Spent/ Points:</th>
           <th></th>
         </tr>
         <tr><% for(let i = 0; i < activitiesX.length; i++)
@@ -30,11 +30,11 @@
           <td><a href= "/activities/<%=activitiesX[i].id%>" class= "descriptionList">
             <%=activitiesX[i].description%></a>
           </td>
-          <td><%=activitiesX[i].timeSpent%> minutes/points
+          <td><%=activitiesX[i].timeSpent%> minutes/ points
           </td>
           <td>
             <form action = "/activities/<%=activitiesX[i].id%>?_method=DELETE" method="POST">
-            <input type= "submit" value="ERASE" class="erase"/>
+            <input type= "submit" value="Erase" class="erase"/>
             </form>
           </td>
         </tr>

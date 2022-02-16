@@ -23,7 +23,7 @@ h1 {
 }
 
 h3 {
-  margin: 1.5vw 10vw 1vw 15vw;
+  margin: 1.5vw 10vw 1vw 13vw;
   color: yellow;
   font-size: 2.5vw;
   text-shadow: -1px -1px 0 #000,
@@ -114,7 +114,7 @@ th, .input, li {
    font-size: 2.5vw;
 }
 
-.totalPoints{
+.totalPoints {
   margin: 0vw 0vw 10vw 12vw;
   text-align: left;
   color: purple;
@@ -130,10 +130,6 @@ ul {
    padding: 1vw 2vw 1vw 0vw;
    color: red;
    font-size: 2vw;
-}
-
-ul {
-  margin: 2vw 2vw 2vw 10vw;
 }
 
 li {
@@ -165,7 +161,7 @@ li {
 .newDiv {
   font-size: 3vw;
   color: green;
-  display:inline;
+  display: center;
   margin: 0vw 1vw 2vw 16vw;
 }
 
@@ -204,4 +200,59 @@ a {
 
 /* The below is the set-up for all html files' smaller device views: */
 @media (max-width: 600px) {
+
+  /* Headings */
+  h1 {
+    font-size: 5vw;
+    margin-top: 15vw;
+  }
+
+  h2, h3, .totalPoints   {
+    font-size: 4vw;
+  }
+
+ h4, body, td, th, li, .input, .newDiv, .inputField, .submit, .erase, .extraActivities {
+    font-size: 3.5vw;
+  }
+
+  .newDiv, ul {
+    margin: 0vw 2vw 0vw 15vw;
+  }
+
+  td, th {
+     padding: 1vw 2vw 1vw 1vw;
+  }
+
+  .totalPoints {
+    margin: 0vw 0vw 20vw 12vw;
+  }
+
+  .extraActivities {
+    margin: 1vw 1vw 15vw 1vw;
+  }
+
+  .extraActivityButton {
+    width: 15vw;
+    margin: 0vw 5vw 5vw 5vw;
+  }
+
+  .container {
+    display: inline;
+  }
+
+  .morningChecklist, .beforeBedChecklist {
+    margin: 0vw 2vw 0vw 30vw;
+    font-size: 3.5vw;
+    width: 75vw;
+  }
+
+  .done {
+    width: 20%;
+  }
+
+  .goodJob {
+    width: 25vw;
+    height: 25vw;
+    margin: 0vw 2vw 0vw 55vw;
+  }
 }
