@@ -69,7 +69,7 @@ body {
    margin: 0vw -15vw 0vw 10vw;
 }
 
-.checkBox:checked {
+.checkBox:checked  {
   filter: invert(100%) hue-rotate(66deg) brightness(7.7);
 }
 
