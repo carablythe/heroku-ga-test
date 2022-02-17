@@ -11,9 +11,11 @@
     </header>
     <h1>Edit a Completed Activity!</h1>
     <form action ="/activities/<%=activitiesX.id%>?_method=PUT" method = "POST" class="input">
-       Day of the Activity: <input type="text" name="day" class= "inputField" value="<%=activitiesX.day%>"/>
+       Day of the Activity:
+       <input type="text" name="day" class= "inputField" value="<%=activitiesX.day%>">
        <br/>
-       Description of the Activity: <input type="text" name="description" class= "inputField" value="<%=activitiesX.description%>"/>
+       Description of the Activity:
+       <input type="text" name="description" class= "inputField" value="<%=activitiesX.description%>"/>
        <br/>
        Time Spent on the Activity: <input type="text" name="timeSpent" class= "inputField" value="<%=activitiesX.timeSpent%>"/> minutes
        (also number of points you earned)<br/>
