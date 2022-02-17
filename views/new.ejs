@@ -11,19 +11,19 @@
       </header>
       <h1>Add a Completed Activity!</h1>
       <form action ="/activities" method="POST" class= "input">
+        Day of the Activity:
+          <input type="radio" name="day" value="Sunday">SUN
+          <input type="radio" name="day" value="Monday">MON
+          <input type="radio" name="day" value="Tuesday">TUE
+          <input type="radio" name="day" value="Wednesday">WED
+          <input type="radio" name="day" value="Thursday">THU
+          <input type="radio" name="day" value="Friday">FRI
+          <input type="radio" name="day" value="Saturday">SAT
+        <br/>
+        <br/>
         Description of the Activity:
          <input type = "text"  name = "description" class="inputField"/>
         <br/>
-        Day of the Activity:
-        <select name="day" class= "inputField">
-          <option value="Sunday">Sunday</option>
-          <option value="Monday">Monday</option>
-          <option value="Tuesday">Tuesday</option>
-          <option value="Wednesday">Wednesday</option>
-          <option value="Thursday">Thursday</option>
-          <option value="Friday">Friday</option>
-          <option value="Saturday">Saturday</option>
-        </select>
         <br/>
         Time Spent on the Activity:
         <input type = "text" name = "timeSpent" class= "inputField"/> minutes (also number of points you earn)
