@@ -69,6 +69,10 @@ body {
    margin: 0vw -15vw 0vw 10vw;
 }
 
+.checkBox:checked {
+  filter: invert(100%) hue-rotate(66deg) brightness(7.7);
+}
+
 .extraActivities {
   column-count: 2;
   color: green;
@@ -142,7 +146,7 @@ li {
   margin: 5vw 5vw 0vw 5vw;
 }
 
-/* DELETE/ERASER BUTTON */
+/* DELETE/ERASER BUTTON on Activities List Page */
 .erase {
   background-color: #F5E050;
   font-size: 2vw;
@@ -156,7 +160,7 @@ li {
   transform: rotate(45deg);
 }
 
-/* Add a New Activity DIV on Completed Activities Page */
+/* Add a New Activity DIV at top of Completed Activities Page */
 
 .newDiv {
   font-size: 3vw;
@@ -187,6 +191,8 @@ li {
   filter: invert(1);
 }
 
+/* Add a New Activity page and Edit pages' buttons placement
+ */
 #newEdit {
   margin: 2vw 5vw 0vw 50vw;
 }

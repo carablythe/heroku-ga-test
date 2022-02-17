@@ -11,6 +11,16 @@ An app for kids to get rewarded for being helpful around the house and in genera
 TECHNOLOGIES USED:
 express, ejs, mongoose, partials, flexbox, javascript... There is no seed file because the data is all user-generated.
 
+UNSOLVED PROBLEMS:
+Right now it is just an app for one child (my child). In order for others to use it, I need to get login capability set-up, as well as user-schema association so that each user (only) has access to their own data collection.
+
+STRETCH/FUTURE GOALS:	It would be great if parents could login to customize the list items, points, possible rewards, etc.
+
+NOTES/FINAL COMMENT:
+My app is really simple, but for the most part accomplishes the goal I set out to achieve.  It is already being used and enjoyed by my daughter, and the physical whiteboard and paper being used for such a purpose in the past is no longer necessary, so that is a success in my book.
+
+-----
+-----
 
 INITIAL PLAN outlined below (changes made):
 
@@ -38,11 +48,3 @@ Form the child fills out where they select from above list of chores or write in
 
 “See list of  completed activities”
 automatic date/time stamp on the “enter new activity” that displays in the “list of completed activities page”/ Also gives the option of deleting or editing each completed activity in the list
-
-UNSOLVED PROBLEMS:
-Right now it is just an app for one child (my child). In order for others to use it, I need to get login capability set-up, as well as user-schema association so that each user (only) has access to their own data collection.
-
-STRETCH/FUTURE GOALS:	It would be great if parents could login to customize the list items, points, possible rewards, etc.
-
-NOTES/FINAL COMMENT:
-My app is really simple, but for the most part accomplishes the goal I set out to achieve.  It is already being used and enjoyed by my daughter, and the physical whiteboard and paper being used for such a purpose in the past is no longer necessary, so that is a success in my book.
