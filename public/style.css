@@ -86,9 +86,9 @@ body {
 }
 
 .extraActivityButton {
-    width: 10vw;
-    float: right;
-    margin: 1vw 7vw 15vw 10vw;
+  width: 10vw;
+  float: right;
+  margin: 1vw 7vw 15vw 10vw;
 }
 
 .extraActivityButton:hover {

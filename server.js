@@ -4,10 +4,18 @@
 const express = require('express');
 const methodOverride  = require('method-override');
 const mongoose = require ('mongoose');
+// const Reward = require('./models/Schema.js')
 const Reward = require('./models/Schema.js')
+const User = require('./models/users.js')
 const app = express ();
 const db = mongoose.connection;
 require('dotenv').config()
+//
+// const userController = require('./controllers/users_controller.js')
+// app.use('/users', userController)
+//
+// const sessionsController = require('./controllers/sessions_controller.js')
+// app.use('/sessions', sessionsController)
 //___________________
 //Port
 //___________________
@@ -21,8 +29,8 @@ const PORT = process.env.PORT || 3003;
 const MONGODB_URI = process.env.MONGODB_URI;
 
 //bcrypt to encrypt users' passwords
-const bcrypt = require('bcrypt')
-const hashedString = bcrypt.hashSync('yourStringHere', bcrypt.genSaltSync(10))
+// const bcrypt = require('bcrypt')
+// const hashedString = bcrypt.hashSync('yourStringHere', bcrypt.genSaltSync(10))
 
 // Connect to Mongo &
 // Fix Depreciation Warnings from Mongoose
@@ -52,7 +60,7 @@ app.use(methodOverride('_method'));// allow POST, PUT and DELETE from a form
 //___________________
 // Routes
 //___________________
-//localhost:3000 and index page set-up
+// localhost:3000 and index page set-up
 app.get('/' , (req, res) => {
     res.render("index.ejs")
 });
@@ -61,19 +69,20 @@ app.get('/' , (req, res) => {
 //Specific functions for this app below
 //_____________________
 
-// // Create "add a new activity" page:
+// // GET: NEW ("add a new activity") page:
 
 app.get('/activities/new', (req,res) => {
   res.render('new.ejs')
 })
 
 
-// // Create "Checklist Reward" page:
+// // GET: "Checklist Reward" page:
 app.get('/checklist_reward', (req, res) => {
     res.render("checklist_reward.ejs")
 });
 
-// // :
+
+// // GET: LIST of "Completed Activities" page following schema:
 app.get('/activities', (req,res) => {
   Reward.find({}, (error, allActivities) => {
     res.render(
@@ -85,21 +94,21 @@ app.get('/activities', (req,res) => {
   })
 })
 
-// // Display a newly added activity on the list of Completed Activities:
+// // POST: CREATE newly added activity result on the list of Completed Activities:
 app.post('/activities', (req, res) => {
   Reward.create(req.body, (error, createdActivity) => {
     res.redirect('/activities')
   })
 })
 
-// // Delete an activity from the list of Completed Activities:
+// // DELETE (DESTROY) result displayed on Completed Activities list page:
 app.delete('/activities/:id', (req, res) => {
   Reward.findByIdAndRemove(req.params.id, (error, data) => {
     res.redirect('/activities')
   })
 })
 
-// // Activities list page:
+// // PUT: UPDATE the edit result displayed on Completed Activities list page:
 
 app.put('/activities/:id', (req,res) => {
   Reward.findByIdAndUpdate(req.params.id, req.body, {new:true},(error, updatedModel) => {
@@ -112,7 +121,7 @@ app.put('/activities/:id', (req,res) => {
   })
 
 
-// // Show each Completed Activity page:
+// // GET: SHOW an individual Completed Activity page:
 app.get('/activities/:id', (req, res) => {
     Reward.findById(req.params.id, (error, foundActivity) => {
       res.render(
@@ -125,7 +134,7 @@ app.get('/activities/:id', (req, res) => {
   })
 
 
-// // Edit a Completed Activity page:
+// // GET: EDIT an already added completed activity page:
 app.get('/activities/:id/edit', (req, res) => {
   Reward.findById(req.params.id, (error, foundActivity) => {
     res.render(

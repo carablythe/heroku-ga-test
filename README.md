@@ -11,18 +11,16 @@ An app for kids to get rewarded for being helpful around the house and in genera
 TECHNOLOGIES USED:
 express, ejs, mongoose, partials, flexbox, javascript... There is no seed file because the data is all user-generated.
 
+SUCCESSES:
+My app is really simple, but for the most part accomplishes the goal I set out to achieve and the design/layout is appropriate for the target users: elementary-aged children.  It is already in use, approved and enjoyed by my intended user: my 7-year-old daughter. Also, the physical whiteboard and papers being used for such a purpose in my home in the past are no longer necessary, so that is a success in my book.
+
 UNSOLVED PROBLEMS:
-Right now it is just an app for one child (my child). In order for others to use it, I need to get login capability set-up, as well as user-schema association so that each user (only) has access to their own data collection.
+Right now it is just an app for one child (my child). In order for others to use it, I need to get login capability set-up, as well as user-schema association so that each user only has access to their own data collection.
 
-STRETCH/FUTURE GOALS:	It would be great if parents could login to customize the list items, points, possible rewards, etc.
-
-NOTES/FINAL COMMENT:
-My app is really simple, but for the most part accomplishes the goal I set out to achieve.  It is already being used and enjoyed by my daughter, and the physical whiteboard and paper being used for such a purpose in the past is no longer necessary, so that is a success in my book.
-
------
+STRETCH/FUTURE GOALS:	In addition to the user login and user schema association, it would be great if parents could login to customize the list items, points, possible rewards, etc.
 -----
 
-INITIAL PLAN outlined below (changes made):
+INITIAL PLAN outlined below (changes made after, of course):
 
 “My Rewards” (changed to *Reward, please!*) App Purpose: for parents to encourage their children to be more independent in completing daily routines, chores and other helpful activities without the assistance of the parents.
 
